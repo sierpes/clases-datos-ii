@@ -80,7 +80,14 @@
 									<h3>Actividad Dirigida 3</h3>
 									<p>Para esta última práctica, he decidido irme a la página oficial del INE (Instituto Nacional de Estadística) y obtener datos relativos a la población andaluza. En concreto, he seleccionado la población existente en cada una de las ocho provincias andaluzas en los años 2020, 2015 y 2010, siempre a fecha de 1 de julio. La motivación para escoger estos datos es debido a que, como andaluz, me interesa saber la evolución poblacional de cada una de las ocho provincias a lo largo de la última década.</p>
 									<p>Para iniciar el tratamiento de estos datos descargados en mi ordenador, he estado utilizando ciertos comandos en la terminal para poder ver la dimensión de los datos. Los primeros comandos utilizados han sido <i>cd</i> y <i>wc –l</i>. El primero sirve para ir a una dirección determinada dentro de mi ordenador, en este caso me he ido a mi escritorio, ya que es ahí donde tenía el archivo en cuestión. El segundo, sirve para saber las líneas totales que tiene el archivo que, en este caso, son 25.</p>
-				
+									<img src="images/wc.png" alt="Imagen de la consola con los comandos cd y wc -l">
+									<p>Los tres siguientes comandos han sido <i>head</i>, <i>tail</i> y <i>cat</i>. Los dos primeros sirven para poder ver determinadas líneas del archivo, con <i>head</i> empezamos desde arriba y con <i>tail</i> desde abajo. Con <i>cat</i> podemos ver el documento en su totalidad.</p>
+									<img src="images/cat.png" alt="Imagen de la consola con los comandos head, tail y cat">
+									<p>Como podemos observar, donde deberían de ir la vocal con su tilde, vemos en su lugar una especie de cuadrado blanco. Esto se debe a que el lenguaje con el que está no permite la visualización de las tildes. Para solucionarlo, debemos utilizar dos comandos: el primero será <i>file</i> para saber qué tipo de lenguaje usa el archivo descargado y, el segundo, para modificar ese lenguaje por el <i>UTF-8</i> que sí muestra las tildes será <i>iconv</i>. Como  podemos ver en el segundo comando, al final del código que me aparecía con file he añadido un “-1”, esto es debido a que si no lo añado con el lenguaje que me aparecía, me va a dar error y no voy a poder solucionar nada. La modificación no se efectúa en el archivo existente, sino que se genera uno nuevo con un nuevo nombre que nosotros le asignamos.</p>
+									<img src="images/iconv.png" alt="Imagen de la consola con los comandos file, iconv y cat">
+									<p>Una vez ya modificado ese fallo, utilicé el comando <i>du –sh</i> para ver el tamaño del nuevo archivo y, para terminar, utilicé el comando nano para meterme dentro del archivo y, si hubiera querido, podría haberlo modificado desde ahí.</p>
+									<img src="images/du.png" alt="Imagen de la consola con el comando du -sh">
+									<img src="images/nano.png" alt="Imagen de la consola dentro del archivo gracias al comando nano">
 								</div>
 							</section>
 
